@@ -1,5 +1,7 @@
 package com.whitewin.config.auth;
 
+import com.whitewin.config.auth.dto.OAuthAttributes;
+import com.whitewin.config.auth.dto.SessionUser;
 import com.whitewin.domain.user.User;
 import com.whitewin.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
