@@ -1,5 +1,6 @@
 package com.whitewin.web;
 
+import com.whitewin.config.auth.LoginUser;
 import com.whitewin.config.auth.dto.SessionUser;
 import com.whitewin.domain.user.User;
 import com.whitewin.service.posts.PostsService;
@@ -17,14 +18,10 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
-    private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
-
-        SessionUser user = (SessionUser) httpSession.
-                getAttribute("user");
 
         if(user != null) {
             model.addAttribute("userName", user.getName());
