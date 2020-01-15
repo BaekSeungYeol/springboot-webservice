@@ -2,7 +2,6 @@ package com.whitewin.web;
 
 import com.whitewin.config.auth.LoginUser;
 import com.whitewin.config.auth.dto.SessionUser;
-import com.whitewin.domain.user.User;
 import com.whitewin.service.posts.PostsService;
 import com.whitewin.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -10,8 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
-import javax.servlet.http.HttpSession;
 
 @RequiredArgsConstructor
 @Controller
