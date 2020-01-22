@@ -25,7 +25,7 @@ deploy:
 
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
 
-    bucket: springboot-webservice # S3 버킷
+    bucket: whitereal-springboot-build # S3 버킷
     region: ap-northeast-2
     skip_cleanup: true
 
