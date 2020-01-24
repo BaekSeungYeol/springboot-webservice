@@ -15,9 +15,9 @@ cache:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r springboot-webservice *
+  - zip -r whitereal-springboot-webservice *
   - mkdir -p deploy
-  - mv springboot-webservice.zip deploy/springboot-webservice.zip
+  - mv whitereal-springboot-webservice.zip deploy/whitereal-springboot-webservice.zip
 
 deploy:
   - provider: s3
@@ -33,7 +33,7 @@ deploy:
       access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
       secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
       bucket: whitereal-springboot-build # S3 버킷
-      key: springboot-webservice.zip # 빌드 파일을 압축해서 전달
+      key: whitereal-springboot-webservice.zip # 빌드 파일을 압축해서 전달
       bundle_type: zip
       application: whitereal-springboot-webservice # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
       deployment_group: whitereal-springboot-webservice-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
