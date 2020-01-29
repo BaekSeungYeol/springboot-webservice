@@ -49,4 +49,4 @@ deploy:
 notifications:
   email:
     recipients:
-      - beck33333@naver.com 
+      - beck33333@naver.com
