@@ -19,7 +19,7 @@ apply plugin: 'io.spring.dependency-management'
 
 
 group 'me.whitewin.warm'
-version '1.0.1-SNAPSHOT-'
+version '1.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
