@@ -14,6 +14,7 @@ cache:
 
 script: "./gradlew clean build"
 
+# Travis auto Test
 before_install:
   - chmod +x gradlew
 
