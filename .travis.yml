@@ -18,7 +18,7 @@ script: "./gradlew clean build"
 before_deploy:
   - zip -r whitereal-springboot-webservice *
   - mkdir -p deploy
-  - mv whitereal-springboot-webservice.zip deploy/whitereal-springboot-webservice.zip
+  - mv whitereal-springboot-webservice.zip deploy/springboot-webservice.zip
 
 deploy:
   - provider: s3
