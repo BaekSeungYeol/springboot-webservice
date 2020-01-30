@@ -36,7 +36,6 @@ deploy:
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-
     bucket: whitereal-springboot-build
     key: whitereal-springboot-webservice.zip
     bundle_type: zip
