@@ -52,6 +52,7 @@ public class PostsService {
         postsRepository.delete(posts);
     }
 
+    @Transactional(readOnly = true)
     public PostsResponseDto findById (Long id) {
         Posts entity = postsRepository.findById(id)
                 .orElseThrow(() -> {
